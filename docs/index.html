@@ -1,309 +1,395 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="cs">
-  <head>
-    <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, minimum-scale=1.0, shrink-to-fit=no, viewport-fit=cover"
-    />
-    <title>Studentův průvodce kybernetikou</title>
-    <meta
-      name="description"
-      content="Studentský Docsify rozcestník pro materiály, maturitní otázky a aktuální informace z kybernetiky."
-    />
-    <link
-      id="theme-light"
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/docsify-themeable@0/dist/css/theme-simple.css"
-    />
-    <link
-      id="theme-dark"
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/docsify-themeable@0/dist/css/theme-simple-dark.css"
-      disabled
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css"
-    />
-    <style>
-      :root {
-        --theme-color: #0f766e;
-        --theme-color-hover: #115e59;
-        --base-background-color: #f6f5ef;
-        --base-color: #1b1d1f;
-        --sidebar-background: linear-gradient(180deg, #e7f3ef 0%, #f7f5ef 100%);
-        --sidebar-name-color: #0f172a;
-        --sidebar-nav-link-color: #25323d;
-        --sidebar-nav-link-color--active: #0f766e;
-        --sidebar-nav-link-background-color--active: rgba(15, 118, 110, 0.1);
-        --heading-color: #102a43;
-        --link-color: #0f766e;
-        --content-max-width: 58rem;
-        --cover-background-image: radial-gradient(circle at top left, rgba(15, 118, 110, 0.14), transparent 34%),
-          radial-gradient(circle at right, rgba(180, 83, 9, 0.12), transparent 28%),
-          linear-gradient(135deg, #f8f6ef 0%, #eef6f1 100%);
-        --font-family: "Segoe UI", "Trebuchet MS", sans-serif;
-        --heading-font-family: "Trebuchet MS", "Segoe UI", sans-serif;
-      }
+    <head>
+        <meta charset="utf-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1, minimum-scale=1.0, shrink-to-fit=no, viewport-fit=cover"
+        />
+        <title>Studentův průvodce kybernetikou</title>
+        <meta
+            name="description"
+            content="Studentský Docsify rozcestník pro materiály, maturitní otázky a aktuální informace z kybernetiky."
+        />
+        <link
+            id="theme-light"
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/docsify-themeable@0/dist/css/theme-simple.css"
+        />
+        <link
+            id="theme-dark"
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/docsify-themeable@0/dist/css/theme-simple-dark.css"
+            disabled
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css"
+        />
+        <style>
+            :root {
+                --theme-color: #0f766e;
+                --theme-color-hover: #115e59;
+                --base-background-color: #f6f5ef;
+                --base-color: #1b1d1f;
+                --sidebar-background: linear-gradient(
+                    180deg,
+                    #e7f3ef 0%,
+                    #f7f5ef 100%
+                );
+                --sidebar-name-color: #0f172a;
+                --sidebar-nav-link-color: #25323d;
+                --sidebar-nav-link-color--active: #0f766e;
+                --sidebar-nav-link-background-color--active: rgba(
+                    15,
+                    118,
+                    110,
+                    0.1
+                );
+                --heading-color: #102a43;
+                --link-color: #0f766e;
+                --content-max-width: 58rem;
+                --cover-background-image:
+                    radial-gradient(
+                        circle at top left,
+                        rgba(15, 118, 110, 0.14),
+                        transparent 34%
+                    ),
+                    radial-gradient(
+                        circle at right,
+                        rgba(180, 83, 9, 0.12),
+                        transparent 28%
+                    ),
+                    linear-gradient(135deg, #f8f6ef 0%, #eef6f1 100%);
+                --font-family: "Segoe UI", "Trebuchet MS", sans-serif;
+                --heading-font-family: "Trebuchet MS", "Segoe UI", sans-serif;
+            }
 
-      html[data-theme="dark"] {
-        --theme-color: #5eead4;
-        --theme-color-hover: #99f6e4;
-        --base-background-color: #0f1418;
-        --base-color: #e5edf3;
-        --sidebar-background: linear-gradient(180deg, #0f1f24 0%, #11161b 100%);
-        --sidebar-name-color: #f3f4f6;
-        --sidebar-nav-link-color: #cbd5e1;
-        --sidebar-nav-link-color--active: #5eead4;
-        --sidebar-nav-link-background-color--active: rgba(94, 234, 212, 0.12);
-        --heading-color: #f8fafc;
-        --link-color: #5eead4;
-        --cover-background-image: radial-gradient(circle at top left, rgba(45, 212, 191, 0.16), transparent 34%),
-          radial-gradient(circle at right, rgba(251, 191, 36, 0.12), transparent 28%),
-          linear-gradient(135deg, #10161b 0%, #132026 100%);
-      }
+            html[data-theme="dark"] {
+                --theme-color: #5eead4;
+                --theme-color-hover: #99f6e4;
+                --base-background-color: #0f1418;
+                --base-color: #e5edf3;
+                --sidebar-background: linear-gradient(
+                    180deg,
+                    #0f1f24 0%,
+                    #11161b 100%
+                );
+                --sidebar-name-color: #f3f4f6;
+                --sidebar-nav-link-color: #cbd5e1;
+                --sidebar-nav-link-color--active: #5eead4;
+                --sidebar-nav-link-background-color--active: rgba(
+                    94,
+                    234,
+                    212,
+                    0.12
+                );
+                --heading-color: #f8fafc;
+                --link-color: #5eead4;
+                --cover-background-image:
+                    radial-gradient(
+                        circle at top left,
+                        rgba(45, 212, 191, 0.16),
+                        transparent 34%
+                    ),
+                    radial-gradient(
+                        circle at right,
+                        rgba(251, 191, 36, 0.12),
+                        transparent 28%
+                    ),
+                    linear-gradient(135deg, #10161b 0%, #132026 100%);
+            }
 
-      .app-name-link img {
-        display: none;
-      }
+            .app-name-link img {
+                display: none;
+            }
 
-      .markdown-section strong {
-        color: #102a43;
-      }
+            .markdown-section strong {
+                color: #102a43;
+            }
 
-      .markdown-section blockquote {
-        border-left: 4px solid #0f766e;
-        background: rgba(255, 255, 255, 0.65);
-      }
+            .markdown-section blockquote {
+                border-left: 4px solid #0f766e;
+                background: rgba(255, 255, 255, 0.65);
+            }
 
-      .sidebar-nav > ul > li > a {
-        font-weight: 600;
-        letter-spacing: 0.01em;
-      }
+            .sidebar-nav > ul > li > a {
+                font-weight: 600;
+                letter-spacing: 0.01em;
+            }
 
-      #theme-toggle {
-        position: fixed;
-        bottom: 1rem;
-        right: 1rem;
-        z-index: 20;
-        border: 1px solid rgba(15, 118, 110, 0.25);
-        border-radius: 999px;
-        background: rgba(255, 255, 255, 0.82);
-        color: #102a43;
-        padding: 0.45rem 0.8rem;
-        font: 600 0.85rem/1 "Segoe UI", "Trebuchet MS", sans-serif;
-        backdrop-filter: blur(10px);
-        cursor: pointer;
-      }
+            #theme-toggle {
+                position: fixed;
+                bottom: 1rem;
+                right: 1rem;
+                z-index: 20;
+                border: 1px solid rgba(15, 118, 110, 0.25);
+                border-radius: 999px;
+                background: rgba(255, 255, 255, 0.82);
+                color: #102a43;
+                padding: 0.45rem 0.8rem;
+                font:
+                    600 0.85rem/1 "Segoe UI",
+                    "Trebuchet MS",
+                    sans-serif;
+                backdrop-filter: blur(10px);
+                cursor: pointer;
+            }
 
-      html[data-theme="dark"] #theme-toggle {
-        background: rgba(15, 23, 32, 0.88);
-        color: #e5edf3;
-        border-color: rgba(94, 234, 212, 0.25);
-      }
+            html[data-theme="dark"] #theme-toggle {
+                background: rgba(15, 23, 32, 0.88);
+                color: #e5edf3;
+                border-color: rgba(94, 234, 212, 0.25);
+            }
 
-      @media (max-width: 768px) {
-        #theme-toggle {
-          bottom: 0.75rem;
-          right: 0.75rem;
-          padding: 0.4rem 0.7rem;
-          font-size: 0.8rem;
-        }
-      }
+            @media (max-width: 768px) {
+                #theme-toggle {
+                    bottom: 0.75rem;
+                    right: 0.75rem;
+                    padding: 0.4rem 0.7rem;
+                    font-size: 0.8rem;
+                }
+            }
 
-      /* Keep only the Docsify-active sidebar branch expanded. */
-      .sidebar-nav li > ul {
-        display: none;
-      }
+            /* Keep only the Docsify-active sidebar branch expanded. */
+            .sidebar-nav li > ul {
+                display: none;
+            }
 
-      .sidebar-nav li.active > ul,
-      .sidebar-nav li:has(> ul li.active) > ul {
-        display: block;
-      }
-    </style>
-  </head>
-  <body>
-    <div id="app">Načítám studijní materiály...</div>
-    <button id="theme-toggle" type="button" aria-label="Přepnout barevné schéma">Tmavý režim</button>
+            .sidebar-nav li.active > ul,
+            .sidebar-nav li:has(> ul li.active) > ul {
+                display: block;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="app">Načítám studijní materiály...</div>
+        <button
+            id="theme-toggle"
+            type="button"
+            aria-label="Přepnout barevné schéma"
+        >
+            Tmavý režim
+        </button>
 
-    <script>
-      function applyTheme(theme) {
-        var root = document.documentElement;
-        var lightTheme = document.getElementById('theme-light');
-        var darkTheme = document.getElementById('theme-dark');
-        var toggle = document.getElementById('theme-toggle');
-        var isDark = theme === 'dark';
+        <script>
+            function applyTheme(theme) {
+                var root = document.documentElement;
+                var lightTheme = document.getElementById("theme-light");
+                var darkTheme = document.getElementById("theme-dark");
+                var toggle = document.getElementById("theme-toggle");
+                var isDark = theme === "dark";
 
-        root.setAttribute('data-theme', theme);
-        lightTheme.disabled = isDark;
-        darkTheme.disabled = !isDark;
+                root.setAttribute("data-theme", theme);
+                lightTheme.disabled = isDark;
+                darkTheme.disabled = !isDark;
 
-        if (toggle) {
-          toggle.textContent = isDark ? 'Světlý režim' : 'Tmavý režim';
-          toggle.setAttribute('aria-pressed', String(isDark));
-        }
-      }
+                if (toggle) {
+                    toggle.textContent = isDark
+                        ? "Světlý režim"
+                        : "Tmavý režim";
+                    toggle.setAttribute("aria-pressed", String(isDark));
+                }
+            }
 
-      function getPreferredTheme() {
-        var savedTheme = localStorage.getItem('sgc-theme');
-        if (savedTheme === 'light' || savedTheme === 'dark') {
-          return savedTheme;
-        }
+            function getPreferredTheme() {
+                var savedTheme = localStorage.getItem("sgc-theme");
+                if (savedTheme === "light" || savedTheme === "dark") {
+                    return savedTheme;
+                }
 
-        return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-      }
+                return window.matchMedia("(prefers-color-scheme: dark)").matches
+                    ? "dark"
+                    : "light";
+            }
 
-      applyTheme(getPreferredTheme());
+            applyTheme(getPreferredTheme());
 
-      document.addEventListener('DOMContentLoaded', function () {
-        var toggle = document.getElementById('theme-toggle');
-        if (!toggle) {
-          return;
-        }
+            document.addEventListener("DOMContentLoaded", function () {
+                var toggle = document.getElementById("theme-toggle");
+                if (!toggle) {
+                    return;
+                }
 
-        toggle.addEventListener('click', function () {
-          var nextTheme = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
-          localStorage.setItem('sgc-theme', nextTheme);
-          applyTheme(nextTheme);
-        });
-      });
+                toggle.addEventListener("click", function () {
+                    var nextTheme =
+                        document.documentElement.getAttribute("data-theme") ===
+                        "dark"
+                            ? "light"
+                            : "dark";
+                    localStorage.setItem("sgc-theme", nextTheme);
+                    applyTheme(nextTheme);
+                });
+            });
 
-      window.$docsify = {
-        name: "Studentův průvodce kybernetikou",
-        repo: "Kybernetika-SPSE/sgc",
-        homepage: "README.md",
-        loadSidebar: "_sidebar.md",
-        auto2top: true,
-        subMaxLevel: 2,
-        maxLevel: 2,
-        notFoundPage: "404.md",
-        search: {
-          placeholder: "Hledat v materiálech",
-          noData: "Nic jsem nenašel.",
-          paths: "auto",
-          depth: 3,
-          maxAge: 600,
-          namespace: "sgc-docs"
-        },
-        markdown: {
-          smartypants: true,
-          externalLinkTarget: "_blank",
-          linkify: true
-        }
-      };
+            window.$docsify = {
+                name: "Studentův průvodce kybernetikou",
+                repo: "Kybernetika-SPSE/sgc",
+                homepage: "README.md",
+                loadSidebar: "_sidebar.md",
+                auto2top: true,
+                subMaxLevel: 2,
+                maxLevel: 2,
+                notFoundPage: "404.md",
+                search: {
+                    placeholder: "Hledat v materiálech",
+                    noData: "Nic jsem nenašel.",
+                    paths: "auto",
+                    depth: 3,
+                    maxAge: 600,
+                    namespace: "sgc-docs",
+                },
+                markdown: {
+                    smartypants: true,
+                    externalLinkTarget: "_blank",
+                    linkify: true,
+                },
+            };
 
-      window.MathJax = {
-        tex: {
-          inlineMath: [['$', '$'], ['\\(', '\\)']],
-          displayMath: [['$$', '$$'], ['\\[', '\\]']]
-        },
-        svg: {
-          fontCache: 'global'
-        },
-        options: {
-          skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
-        }
-      };
+            window.MathJax = {
+                tex: {
+                    inlineMath: [
+                        ["$", "$"],
+                        ["\\(", "\\)"],
+                    ],
+                    displayMath: [
+                        ["$$", "$$"],
+                        ["\\[", "\\]"],
+                    ],
+                },
+                svg: {
+                    fontCache: "global",
+                },
+                options: {
+                    skipHtmlTags: [
+                        "script",
+                        "noscript",
+                        "style",
+                        "textarea",
+                        "pre",
+                        "code",
+                    ],
+                },
+            };
 
-      function docsifyWikiLinksPlugin(hook, vm) {
-        function splitTarget(target) {
-          var hashIndex = target.indexOf('#');
-          if (hashIndex === -1) {
-            return { path: target, hash: '' };
-          }
+            function docsifyWikiLinksPlugin(hook, vm) {
+                function splitTarget(target) {
+                    var hashIndex = target.indexOf("#");
+                    if (hashIndex === -1) {
+                        return { path: target, hash: "" };
+                    }
 
-          return {
-            path: target.slice(0, hashIndex),
-            hash: target.slice(hashIndex)
-          };
-        }
+                    return {
+                        path: target.slice(0, hashIndex),
+                        hash: target.slice(hashIndex),
+                    };
+                }
 
-        function resolveWikiTarget(target, currentFile) {
-          var split = splitTarget(target.trim());
-          var clean = split.path;
-          var hash = split.hash;
+                function resolveWikiTarget(target, currentFile) {
+                    var split = splitTarget(target.trim());
+                    var clean = split.path;
+                    var hash = split.hash;
 
-          if (!clean) {
-            return hash || clean;
-          }
+                    if (!clean) {
+                        return hash || clean;
+                    }
 
-          if (/^(https?:)?\/\//.test(clean) || clean.charAt(0) === '#') {
-            return clean + hash;
-          }
+                    if (
+                        /^(https?:)?\/\//.test(clean) ||
+                        clean.charAt(0) === "#"
+                    ) {
+                        return clean + hash;
+                    }
 
-          var hasExtension = /\.[a-z0-9]+$/i.test(clean);
-          var isMarkdown = /\.(md|html)$/i.test(clean);
+                    var hasExtension = /\.[a-z0-9]+$/i.test(clean);
+                    var isMarkdown = /\.(md|html)$/i.test(clean);
 
-          if (!hasExtension && clean.charAt(clean.length - 1) !== '/') {
-            clean += '.md';
-            hasExtension = true;
-            isMarkdown = true;
-          }
+                    if (
+                        !hasExtension &&
+                        clean.charAt(clean.length - 1) !== "/"
+                    ) {
+                        clean += ".md";
+                        hasExtension = true;
+                        isMarkdown = true;
+                    }
 
-          if (clean.charAt(0) === '/') {
-            clean = clean.slice(1);
-          }
+                    if (clean.charAt(0) === "/") {
+                        clean = clean.slice(1);
+                    }
 
-          var base = '';
-          if (currentFile && currentFile.indexOf('/') !== -1) {
-            base = currentFile.replace(/[^/]*$/, '');
-          }
+                    var base = "";
+                    if (currentFile && currentFile.indexOf("/") !== -1) {
+                        base = currentFile.replace(/[^/]*$/, "");
+                    }
 
-          var resolvedPath = clean.indexOf('/') !== -1 ? clean : base + clean;
+                    var resolvedPath =
+                        clean.indexOf("/") !== -1 ? clean : base + clean;
 
-          if (isMarkdown) {
-            return '#/' + resolvedPath + hash;
-          }
+                    if (isMarkdown) {
+                        return "#/" + resolvedPath + hash;
+                    }
 
-          return resolvedPath + hash;
-        }
+                    return resolvedPath + hash;
+                }
 
-        function convertWikiLinks(markdown, currentFile) {
-          var parts = markdown.split(/(```[\s\S]*?```|`[^`\n]+`)/g);
+                function convertWikiLinks(markdown, currentFile) {
+                    var parts = markdown.split(/(```[\s\S]*?```|`[^`\n]+`)/g);
 
-          return parts
-            .map(function (part) {
-              if (part.slice(0, 3) === '```' || part.charAt(0) === '`') {
-                return part;
-              }
+                    return parts
+                        .map(function (part) {
+                            if (
+                                part.slice(0, 3) === "```" ||
+                                part.charAt(0) === "`"
+                            ) {
+                                return part;
+                            }
 
-              return part.replace(/\[\[([^\]|]+?)(?:\|([^\]]+))?\]\]/g, function (_, target, label) {
-                var resolved = resolveWikiTarget(target, currentFile);
-                var text = (label || target).trim();
-                return '[' + text + '](' + resolved + ')';
-              });
-            })
-            .join('');
-        }
+                            return part.replace(
+                                /\[\[([^\]|]+?)(?:\|([^\]]+))?\]\]/g,
+                                function (_, target, label) {
+                                    var resolved = resolveWikiTarget(
+                                        target,
+                                        currentFile,
+                                    );
+                                    var text = (label || target).trim();
+                                    return "[" + text + "](" + resolved + ")";
+                                },
+                            );
+                        })
+                        .join("");
+                }
 
-        hook.beforeEach(function (content) {
-          var currentFile = vm.route.file || 'README.md';
-          return convertWikiLinks(content, currentFile);
-        });
-      }
+                hook.beforeEach(function (content) {
+                    var currentFile = vm.route.file || "README.md";
+                    return convertWikiLinks(content, currentFile);
+                });
+            }
 
-      function docsifyMathJaxPlugin(hook) {
-        hook.doneEach(function () {
-          if (window.MathJax && window.MathJax.typesetPromise) {
-            window.MathJax.typesetPromise();
-          }
-        });
-      }
+            function docsifyMathJaxPlugin(hook) {
+                hook.doneEach(function () {
+                    if (window.MathJax && window.MathJax.typesetPromise) {
+                        window.MathJax.typesetPromise();
+                    }
+                });
+            }
 
-      window.$docsify.plugins = [].concat(docsifyWikiLinksPlugin, docsifyMathJaxPlugin, window.$docsify.plugins || []);
-    </script>
+            window.$docsify.plugins = [].concat(
+                docsifyWikiLinksPlugin,
+                docsifyMathJaxPlugin,
+                window.$docsify.plugins || [],
+            );
+        </script>
 
-    <script src="https://cdn.jsdelivr.net/npm/docsify@4/lib/docsify.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/docsify@4/lib/plugins/search.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/docsify-copy-code/dist/docsify-copy-code.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/docsify-pagination/dist/docsify-pagination.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/docsify/lib/plugins/zoom-image.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/prismjs@1/components/prism-bash.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/prismjs@1/components/prism-json.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/prismjs@1/components/prism-latex.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/prismjs@1/components/prism-python.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/docsify-themeable@0/dist/js/docsify-themeable.min.js"></script>
-  </body>
+        <script src="https://cdn.jsdelivr.net/npm/docsify@4/lib/docsify.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/docsify@4/lib/plugins/search.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/docsify-copy-code/dist/docsify-copy-code.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/docsify-pagination/dist/docsify-pagination.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/docsify/lib/plugins/zoom-image.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/prismjs@1/components/prism-bash.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/prismjs@1/components/prism-json.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/prismjs@1/components/prism-latex.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/prismjs@1/components/prism-python.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/docsify-themeable@0/dist/js/docsify-themeable.min.js"></script>
+    </body>
 </html>
