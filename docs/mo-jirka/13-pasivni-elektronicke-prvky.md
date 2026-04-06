@@ -205,6 +205,8 @@ $$\tau = R \cdot C$$
 
 > **Závěrečné srovnání:** Zatímco cívka "bojuje" proti změně proudu (akumuluje energii v mag. poli), kondenzátor "bojuje" proti změně napětí (akumuluje energii v el. poli). V praxi jsou tyto dvě součástky svými protiklady (duální prvky).
 
+> Mimochodem, jejich kapacitní a induktivní reaktance jsou také navzájem inverzní: $X_{C} = \frac{1}{X_{L}}$ pro stejné frekvence a hodnoty $L$ a $C$ a jsou přímo spojené s přechodovými ději v RC a RL obvodech, které jsme si ukázali. Co by jste čekali že se stane, když místo obdélnékového signálu v grafech přechodových dějů použijeme sinus?
+
 
 
 
@@ -226,12 +228,13 @@ Zatímco u lineárních prvků (rezistor, cívka, kondenzátor) je vztah mezi pr
 
 #### Reálná dioda
 
-- v propustném směru vzniká na diodě prahové napětí \(U_{F}\), které musí obvod "překonat", aby dioda začala vést (u křemíku cca \(0,7 V\), u germania cca \(0,3 V\))
-- v závěrném směru protéká nepatrný závěrný proud (jednotky \(\mu A\) až \(nA\))
+- v propustném směru vzniká na diodě prahové napětí $U_{F}$, které musí obvod "překonat", aby dioda začala vést (u křemíku cca $0,7 V$, u germania cca $0,3 V$)
+- v závěrném směru protéká nepatrný závěrný proud (jednotky $\mu A$ až $nA$)
 - při překročení určitého napětí v závěrném směru dojde k průrazu
 
+![](images/13-diode-va-approx.png)
 
-> Poznámka: Proč dioda v propustném směru "bere" napětí? Prahové napětí \(U_{F}\) souvisí s energií potřebnou k překonání potenciálové bariéry na PN přechodu. Při výpočtech (jako u příkladu s LED u rezistorů) na to nesmíme zapomenout: \(U_{R} = U_{zdroj} - U_{F}\).
+> Poznámka: Proč dioda v propustném směru "bere" napětí? Prahové napětí $U_{F}$ souvisí s energií potřebnou k překonání potenciálové bariéry na PN přechodu. Při výpočtech (jako u příkladu s LED u rezistorů) na to nesmíme zapomenout: $U_{R} = U_{zdroj} - U_{F}$.
 
 
 #### Typy diod a jejich užití
@@ -239,9 +242,12 @@ Zatímco u lineárních prvků (rezistor, cívka, kondenzátor) je vztah mezi pr
 - Usměrňovací dioda – nejčastější použití, mění střídavý proud (AC) na tepavý stejnosměrný (DC). Najdeme ji v každém napájecím adaptéru.
 - Zenerova dioda – pracuje v tzv. "Zenerově průrazu" v závěrném směru. Udržuje konstantní napětí, používá se ke stabilizaci napětí.
 - LED (Luminiscenční dioda) – při průchodu proudu v propustném směru vyzařuje světlo. Barva závisí na použitém materiálu (šířce zakázaného pásu).
-- Fotodioda – reaguje na dopadající světlo. V závěrném směru se po osvícení zvýší průtok proudu (generování nosičů náboje světlem).
-- Schottkyho dioda – nemá PN přechod (kov-polovodič), je velmi rychlá a má nízký úbytek napětí (\(U_{F} \approx 0,3 V\)). Ideální pro spínané zdroje.
+- Fotodioda – reaguje na dopadající světlo. V závěrném směru se po osvícení zvýší průtok proudu (generování nosičů náboje světlem). Ve velkém planárním provedení jim říkáme solární panely...
+- Schottkyho dioda – nemá PN přechod (jedná se o přechod kov-polovodič), je velmi rychlá a má nízký úbytek napětí ($U_{F} \approx 0,3 V$). Ideální pro spínané zdroje. Má ovšem velký závěrný proud (10x+ oproti běžné křemíkové diodě).
 
+![](images/13-diodes-va-approx-colors.png)
+
+> Úbytek napětí diody přímo souvisí s materiálem a jeho zakázaným pásem. U křemíku je to cca 0,7 V, u germania cca 0,3 V, u LED závisí na barvě (červená cca 1,8 V, modrá/zelená cca 3 V). Velikost zakázaného pásu (v eV) přímo určuje energii vyzářených fotonů a tím i barvu světla. Jen u křemíkových diod je tak malá, že ji vnímáme ve formě tepla (infračerveného záření ohřívajícího pouzdro). Víte jak vypadal hon za [modrou LEDkou](https://www.youtube.com/watch?v=AF8d72mA41M)?
 
 ---
 
@@ -275,7 +281,7 @@ Součástky, jejichž odpor se mění s teplotou.
 #### Varikap
 
 - speciální dioda v závěrném směru, která se chová jako proměnný kondenzátor
-- kapacita se mění velikostí závěrného napětí \(U_{R}\)
+- kapacita se mění velikostí závěrného napětí $U_{R}$
 - užití: ladění rádiových přijímačů (místo mechanických otočných kondenzátorů)
 
-> Pro zvídavé: Jak se značí tyto součástky ve schématech? Většinou jde o značku rezistoru, která je doplněna šikmou čarou a symbolem veličiny: \(t\) pro teplotu, \(\gamma\) pro světlo, nebo \(U\) pro napětí.
+> Pro zvídavé: Jak se značí tyto součástky ve schématech? Většinou jde o značku rezistoru, která je doplněna šikmou čarou a symbolem veličiny: $t$ pro teplotu, $\gamma$ pro světlo, nebo $U$ pro napětí.
