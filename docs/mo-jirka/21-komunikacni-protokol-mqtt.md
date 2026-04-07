@@ -1,8 +1,4 @@
-﻿Zde je přepracovaná maturitní otázka na téma MQTT, upravená do stejného stylu, v jakém jsme připravili pasivní součástky. Text je sjednocen, zjednodušen pro výuku a doplněn o praktické poznámky.
-
----
-
-# Otázka 21 - Komunikační protokol MQTT
+﻿# Otázka 21 - Komunikační protokol MQTT
 
 ## Slovo úvodem
 **MQTT** (*Message Queuing Telemetry Transport*) je extrémně lehký komunikační protokol navržený pro situace, kde je omezená propustnost sítě, nízký výpočetní výkon nebo požadavek na minimální spotřebu energie. Proto se stal de-facto standardem pro **IoT** (Internet věcí).
