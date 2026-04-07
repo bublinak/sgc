@@ -28,3 +28,5 @@ Sekce pro Pavlovo zpracování maturitních otázek 1 až 12.
     - [prezentace3](assets/Deep_Neural_Networks_1.pdf)
 
 - Odkaz na původní (nedodělaná) [skripta](https://github.com/bublinak/skripta-kyb):
+
+- Materiály na algoritmizaci a OOP (ot. 11 a 12) jsou  k dispozici v podobe zdrojů na [google drivu](https://drive.google.com/drive/folders/1BITALnXl_1SiHENJC8iYHsOI2mLOxA48?usp=sharing). 
