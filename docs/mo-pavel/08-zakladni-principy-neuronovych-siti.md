@@ -49,8 +49,8 @@ Perceptron se učí z trénovacích dat. Postupně prochází všechny příklad
 1. Pro daný vstup xᵢ spočítá výstup ŷ = sign(w·xᵢ + b).
 2. Pokud se spletl (ŷ ≠ yᵢ), upraví váhy podle pravidla:
 
-   w := w + η * yᵢ * xᵢ  
-   b := b + η * yᵢ
+   w := w + η * (yᵢ - ŷᵢ)  * xᵢ  
+   b := b + η * (yᵢ - ŷᵢ)
 
    kde η je koeficient učení (learning rate).
 
