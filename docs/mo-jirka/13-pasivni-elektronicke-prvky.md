@@ -57,15 +57,6 @@ Z polovodičových prvků v pasivní kategorii najdeme diody a různé součást
 
 > Trimry a potenciometry mohou být posuvné, otočné (i víceotáčkové), ovšem nikdy ne kontinuální (z principu jejich konstrukce). Neplést s rotačními enkodéry, které jsou kontinuální a měří se digitálně.
 
----
-Zde je přepracovaná část o cívkách, upravená přesně podle vašeho stylu, včetně doplňujících poznámek a intuitivních vysvětlení.
-
----
-
-Zde je kompletní, sjednocená verze textu o cívkách, upravená přesně podle vašeho stylu, s doplněnými vzorci a technickými detaily.
-
----
-
 ### Cívky
 - hlavní vlastností je elektrická **indukčnost** $L$, jednotka: **Henry** $[H]$, pojmenována po [Josephu Henrym](https://cs.wikipedia.org/wiki/Joseph_Henry)
 - cívka je schopna hromadit energii v **magnetickém poli**, které vzniká kolem vodiče při průchodu proudu
@@ -136,12 +127,6 @@ $$\tau = \frac{L}{R}$$
 ![](images/13-fazovy-posun-civka.png)
 
 > **Praktický tip:** Cívky jsou v elektronice často ty "nejproblematičtější" součástky. Jsou velké, těžké, drahé a generují magnetické pole, které může rušit okolní obvody. Proto se v moderní mikrolektronice konstruktéři snaží cívky nahrazovat jinými zapojeními (např. pomocí operačních zesilovačů – tzv. gyrátorů), pokud je to jen trochu možné.
-
----
-
-Zde je přepracovaný text o kondenzátorech, upravený do stejné struktury a tónu, jaký jste nastavil u rezistorů a cívek.
-
----
 
 ### Kondenzátory
 - hlavní vlastností je elektrická **kapacita** $C$, jednotka: **Farad** $[F]$, pojmenována po angl. fyzikovi [Michaelu Faradayovi](https://cs.wikipedia.org/wiki/Michael_Faraday)
